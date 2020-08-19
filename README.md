@@ -6,6 +6,37 @@ code tidbits.
 For details about the PYthon Microscopy Environment (PYME) please
 refer to <https://python-microscopy.org>.
 
+## Rationale
+
+We aim to have a largish collection of interesting data examples and
+code that explores how to handle this data in notebooks (rather than
+the GUI applications that also come with PYME). The term _largish_ will
+probably be constrained by the intent to keep the data in one git
+repository hosted on github.
+
+The focus is _not_ on providing minimal and as small as possible data
+sets, rather _big enough_ and _interesting_ are the guiding
+considerations.
+
+The data should also be of utility to check the ability of PYME to
+correctly open and interpret this data.
+
+It is possible that a smaller core set of example data sets for PYME will be
+assembled into their own repository, but that is up to the core PYME
+development team to decide. If created, this may or may not overlap
+with the data sets assembled in this _PYME extra data set repository_.
+
+## Required packages to run the code examples
+
+We generally require PYME, see <https://python-microscopy.org>. In
+addition, some examples may require the
+[PYME-extra](https://github.com/csoeller/PYME-extra) plugin package,
+available at github.
+
+We will aim to point out which notebooks require external
+code. Initially, as we develop this repository, the code examples may
+not all point out dependencies correctly.
+
 ## Structure
 
 There is a data subtree with example data from various sources. We
