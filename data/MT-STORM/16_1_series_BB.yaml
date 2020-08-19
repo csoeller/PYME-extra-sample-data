@@ -1,0 +1,31 @@
+- localisations.ProcessColour:
+    input: Localizations
+    output: colour_mapped
+    species_dyes:
+      beta tubulin: A647
+    species_ratios:
+      beta tubulin: 0.85
+- tablefilters.FilterTable:
+    filters:
+      A:
+      - 5
+      - 20000
+      error_x:
+      - 0
+      - 30
+      error_y:
+      - 0
+      - 30
+      sig:
+      - 95
+      - 200
+    inputName: colour_mapped
+    outputName: filtered_localizations
+- pymenf.DriftCorrectModel:
+    driftCorrParams:
+      a: 0.01274763885885477
+      b: 0.010999999940395355
+      c: 0.0
+    inputName: filtered_localizations
+    outputName: drift_corrected
+    presets: Linear
