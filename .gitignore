@@ -38,3 +38,4 @@ tests/assets/*
 tests/cov_html/*
 tests/*.html
 *.css.map
+sample-code/experimenting.ipynb
