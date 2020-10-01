@@ -1,0 +1,49 @@
+- localisations.ProcessColour:
+    input: Localizations
+    output: colour_mapped
+    species_dyes:
+      IP3R: ATTO655
+      RyR: ATTO655
+    species_ratios:
+      IP3R: 0.74
+      RyR: 0.74
+- tablefilters.FilterTable:
+    filters:
+      A:
+      - 5.0
+      - 270758.025235
+      error_x:
+      - 0
+      - 30
+      error_y:
+      - 0
+      - 30
+    inputName: colour_mapped
+    outputName: filtered_localizations
+- tablefilters.FilterTable:
+    filters:
+      x:
+      - 4041.8709484160454
+      - 4860.164035913549
+      y:
+      - 20806.689420337698
+      - 21537.930051718446
+    inputName: filtered_localizations
+    outputName: Fiducials
+- localisations.FiducialTrack:
+    inputName: Fiducials
+    outputName: fiducialAdded
+- localisations.FiducialApplyFromFiducials:
+    inputData: filtered_localizations
+    inputFiducials: fiducialAdded
+    outputFiducials: corrected_fiducials
+    outputName: fiducialApplied
+- localisations.TimedSpecies:
+    Species_1_Name: IP3R2
+    Species_1_Start: 30.0
+    Species_1_Stop: 50600.0
+    Species_2_Name: RyR
+    Species_2_Start: 54300.0
+    Species_2_Stop: 80700.0
+    inputName: fiducialApplied
+    outputName: timedSpecies
