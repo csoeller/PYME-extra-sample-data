@@ -6,11 +6,17 @@ that includes some basic drift correction.
 # Sample and acquisition information: #
 
 1'Ab: Beta tubulin
+
 2'Ab: Alexa Fluor 647
+
 Type: dSTORM
+
 Buffer: mM MEA in 90% glycerol
+
 Camera: Zyla-4.2-CL10 (Andor sCMOS)
+
 Integration time:  25 ms
+
 Total duration (frames): 35.4k  
 
 
