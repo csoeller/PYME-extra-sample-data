@@ -1,0 +1,107 @@
+- localisations.ProcessColour:
+    input: Localizations
+    output: colour_mapped
+- tablefilters.FilterTable:
+    filters:
+      A:
+      - 5
+      - 20000
+      error_x:
+      - 0
+      - 30
+      error_y:
+      - 0
+      - 30
+      sig:
+      - 95
+      - 200
+      x:
+      - 13345.0
+      - 24191.0
+      y:
+      - 19678.0
+      - 28101.0
+    inputName: colour_mapped
+    outputName: filtered_localizations
+- tablefilters.FilterTable:
+    filters:
+      x:
+      - 22253.0
+      - 24054.0
+      y:
+      - 22553.0
+      - 25288.0
+    inputName: filtered_localizations
+    outputName: find_fid
+- localisations.FiducialTrack:
+    inputName: find_fid
+    outputName: fiducialAdded
+    timeWindow: 250
+- localisations.FiducialApplyFromFiducials:
+    inputData: filtered_localizations
+    inputFiducials: fiducialAdded
+    outputFiducials: corrected_fiducials
+    outputName: fiducialApplied
+- tracking.FindClumps:
+    inputName: fiducialApplied
+    outputClumps: ''
+    outputName: with_clumps
+- localisations.MergeClumps:
+    inputName: with_clumps
+    outputName: coalesced
+- localisations.DBSCANClustering2:
+    columns:
+    - x
+    - y
+    inputName: coalesced
+    minClumpSize: 3
+    outputName: dbscanClustered
+    searchRadius: 50.0
+- tablefilters.FilterTable:
+    filters:
+      dbscanClumpID:
+      - 0.5
+      - 500.0
+    inputName: dbscanClustered
+    outputName: validCluster
+- localisations.ClusterTimeRange:
+    inputName: validCluster
+    outputName: withTrange
+- tablefilters.FilterTable:
+    filters:
+      trange:
+      - 2500
+      - 1000000.0
+    inputName: withTrange
+    outputName: specLabeling
+- tablefilters.FilterTable:
+    filters:
+      error_x:
+      - 0.0
+      - 5.0
+      x:
+      - 14853.0
+      - 23823.0
+      y:
+      - 20691.0
+      - 28287.0
+    inputName: specLabelingNC
+    outputName: ROI
+- localisations.ValidClumps:
+    inputName: with_clumps
+    inputValid: specLabeling
+    outputName: with_validClumps
+- tablefilters.FilterTable:
+    filters:
+      validID:
+      - 0.5
+      - 1.5
+    inputName: with_validClumps
+    outputName: specLabelingNC
+- tablefilters.FilterTable:
+    filters:
+      validID:
+      - -0.5
+      - 0.5
+    inputName: with_validClumps
+    outputName: nonSpecNC
