@@ -1,6 +1,6 @@
 # 3D (biplane) surface RyR DNA-PAINT data set #
 
-This is a region from a DNA-PAINT RyR data set. We include a recipe (YAML file) that corrects for drift using the fiducial present in the data. 
+This is a region from a DNA-PAINT RyR data set. We include a recipe (YAML file) that corrects for drift using the fiducial present in the data. A final module selects for a region of interest (select data source ROI).  
 
 # Sample and acquisition information: #
 

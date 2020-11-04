@@ -55,4 +55,4 @@
       - -150.0
       - 500.0
     inputName: fiducialApplied
-    outputName: ROI_f
+    outputName: ROI
