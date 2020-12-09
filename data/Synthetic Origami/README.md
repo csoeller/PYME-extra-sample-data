@@ -1,6 +1,6 @@
 # 2D synthetic DNA origami (6 die face) DNA-PAINT data set #
 
-This is a region from a DNA-PAINT Origami data set. We include a recipe (YAML file) that corrects for drift using the fiducial present in the data. Events are coalesced and non-specific events (based on a temporal filter) are removed. Finally a region of interest (select data source ROI) has been created to peruse.
+This is a region from a DNA-PAINT Origami data set. We include a recipe (YAML file) that corrects for drift using the fiducial present in the data. Events are coalesced and non-specific events (based on a temporal filter) are removed. Finally a filtered region of interest (select data source ROI) has been created to peruse.
 
 
 # Sample and acquisition information: #

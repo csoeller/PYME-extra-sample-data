@@ -78,30 +78,12 @@
     filters:
       error_x:
       - 0.0
-      - 5.0
+      - 7.5
       x:
       - 14853.0
       - 23823.0
       y:
       - 20691.0
       - 28287.0
-    inputName: specLabelingNC
+    inputName: specLabeling
     outputName: ROI
-- localisations.ValidClumps:
-    inputName: with_clumps
-    inputValid: specLabeling
-    outputName: with_validClumps
-- tablefilters.FilterTable:
-    filters:
-      validID:
-      - 0.5
-      - 1.5
-    inputName: with_validClumps
-    outputName: specLabelingNC
-- tablefilters.FilterTable:
-    filters:
-      validID:
-      - -0.5
-      - 0.5
-    inputName: with_validClumps
-    outputName: nonSpecNC
