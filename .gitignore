@@ -6,6 +6,7 @@ syntax: glob
 *~
 #*#
 .ipynb_checkpoints
+**/build/
 */build/*
 */*/build/*
 build\*

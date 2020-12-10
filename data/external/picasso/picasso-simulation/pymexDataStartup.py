@@ -5,7 +5,7 @@ plt.rc('image', interpolation='nearest', cmap='gray')
 
 import os
 # make sure we have the directory into which we write build-data
-bdir = '../build'
+bdir = 'build'
 def inbdir(filename):
     return os.path.join(bdir,filename)
 
