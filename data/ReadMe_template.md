@@ -14,8 +14,10 @@ Short description (optional but strongly encouraged, 1-2 lines)
 | **Primary Ab, concentration/dilution:**   |                           |
 | **Secondary Ab, concentration/dilution:** |                           |
 | **Fiducial (type/present):**              |                           |
-| **Imager, concentration:**                |                           |
+| **SR mode, Imager conc, buffer, etc:**    |                           |
 | **Number of frames:**                     |                           |
+
+**Note**: Some further data is available from the metadata in the `h5r` file. Please consult the metadata tab in `visGUI`.
 
 
 ### Notes
