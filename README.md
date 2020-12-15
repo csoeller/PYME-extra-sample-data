@@ -1,4 +1,4 @@
-# Example data (and a little code) for PYME localisation data handling
+# Example data (and some code) for PYME localisation data handling
 
 This repo aims to collect PYME localisation data examples and some useful
 code tidbits.
@@ -29,29 +29,33 @@ with the data sets assembled in this _PYME extra data set repository_.
 ## Required packages to run the code examples
 
 We generally require PYME, see <https://python-microscopy.org>. In
-addition, some examples may require the
+addition, some examples require the
 [PYME-extra](https://github.com/csoeller/PYME-extra) plugin package,
 available at github.
 
-We will aim to point out which notebooks require external
+We will aim to point out which notebooks require additional external
 code. Initially, as we develop this repository, the code examples may
-not all point out dependencies correctly.
+not all point out dependencies correctly. The repository provides an [issue tracker](https://github.com/csoeller/PYME-extra-sample-data/issues), so please feel free to raise an issue if you notice problems with the supplied data or code.
 
 ## Structure
 
 There is a data subtree with example data from various sources. We
-will strive to document a little about the origin of the data in
-readme files in the respective directories.
+aim to document the origin of the data in ReadMe files in the respective directories.
 
 We also intend to maintain some example code how to convert, access
-and manipulate the example data. These should also serve as reminders
+and manipulate the example data. These are provided as jupyter notebooks and should also serve as reminders
 how to programmatically access SMLM data files outside the VisGUI
 graphical application. This is a useful mode for power users and also
-has the great advantage to be able to _replay_ an action without the
-clicking and selecting functionality in the GUI. 
+has the great advantage to be able to _replay_ an action outside the point and click interface of the GUI. 
 
-Needless to say, this will likely remain a _work in progress_.
+Needless to say, this will likely remain a _work in progress_.\
+
+## Contributing
+
+We welcome data contributions. Please contact us, for example, via the [issue tracker](https://github.com/csoeller/PYME-extra-sample-data/issues).
+
+**Note**: All contributions should be accompanied by a ReadMe file in markdown format that follows the [Readme_template.md](https://github.com/csoeller/PYME-extra-sample-data/blob/master/data/ReadMe_template.md) conventions. The best way to achieve this is to copy the template and populate the various sections as described in the template.
 
 ## Author
 
-[Christian Soeller](https://soellerlab.ex.ac.uk)
+[Christian Soeller](https://soellerlab.ex.ac.uk) and co-authors
