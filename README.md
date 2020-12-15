@@ -48,7 +48,7 @@ how to programmatically access SMLM data files outside the VisGUI
 graphical application. This is a useful mode for power users and also
 has the great advantage to be able to _replay_ an action outside the point and click interface of the GUI. 
 
-Needless to say, this will likely remain a _work in progress_.\
+Needless to say, this will likely remain a _work in progress_.
 
 ## Contributing
 

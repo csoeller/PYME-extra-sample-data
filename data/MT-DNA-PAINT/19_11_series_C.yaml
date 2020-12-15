@@ -1,0 +1,73 @@
+- localisations.AddPipelineDerivedVars:
+    inputEvents: ''
+    inputFitResults: FitResults
+    outputLocalizations: Localizations
+- localisations.ProcessColour:
+    input: Localizations
+    output: colour_mapped
+- tablefilters.FilterTable:
+    filters:
+      A:
+      - 5
+      - 20000
+      error_x:
+      - 0.0
+      - 15.0
+      error_y:
+      - 0
+      - 30
+      sig:
+      - 95
+      - 200
+    inputName: colour_mapped
+    outputName: filtered_localizations
+- pymenf.DriftCorrectModel:
+    driftCorrParams:
+      a0: 0.004532636143267155
+      a1: 0.009327135980129242
+      a2: -0.004906083457171917
+      a3: 0.019109580665826797
+      a4: 0.009911231696605682
+      b0: -0.0047477250918745995
+      b1: -0.0015205838717520237
+      b2: -0.0081239128485322
+      b3: -0.002523198490962386
+      b4: 0.0027499080169945955
+      c: 0.0
+    driftExprX: x_raw + piecewiseLinear(t, [4.1e+03, 8.3e+03, 1.2e+04, 1.6e+04], [a0,
+      a1, a2, a3, a4])
+    driftExprY: y_raw + piecewiseLinear(t, [4.1e+03, 8.3e+03, 1.2e+04, 1.6e+04], [b0,
+      b1, b2, b3, b4])
+    inputName: filtered_localizations
+    outputName: drift_corrected
+    presets: Piecewise Linear
+- tablefilters.FilterTable:
+    inputName: filtered_localizations
+    outputName: selectedROI
+- pymenf.DriftCorrectModel:
+    driftCorrParams:
+      a0: 0.008242282085120678
+      a1: 0.0011852745665237308
+      a2: -0.00015106120554264635
+      a3: 0.023229999467730522
+      a4: 0.009124813601374626
+      b0: -0.007584048435091972
+      b1: 0.0007530807051807642
+      b2: -0.008415021002292633
+      b3: -0.0023886761628091335
+      b4: -5.146084731677547e-05
+      c: 0.0
+    driftExprX: x_raw + piecewiseLinear(t, [4.0e+03, 8.0e+03, 1.2e+04, 1.6e+04], [a0,
+      a1, a2, a3, a4])
+    driftExprY: y_raw + piecewiseLinear(t, [4.0e+03, 8.0e+03, 1.2e+04, 1.6e+04], [b0,
+      b1, b2, b3, b4])
+    inputName: selectedROI
+    outputName: dc2
+    presets: Piecewise Linear
+- tracking.FindClumps:
+    inputName: drift_corrected
+    outputClumps: ''
+    outputName: with_clumps
+- localisations.MergeClumps:
+    inputName: with_clumps
+    outputName: coalesced
