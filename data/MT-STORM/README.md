@@ -11,11 +11,11 @@ that includes some basic drift correction.
 | ------------------------------------------|:-------------------------:|
 | **File name/date:**                       | `16_1_series_BB_microtubules_STORM.h5r` |
 | **Sample (tissue/cell type):**            |  COS-7 cells                           |
-| **Sample prep., fixation method:**        |  PFA fixed (duration, conc)?           |
-| **Primary Ab, concentration/dilution:**   |  anti-beta-tubulin (manufacturer?)     |
+| **Sample prep., fixation method:**        |  PFA fixed          |
+| **Primary Ab, concentration/dilution:**   |  anti-beta-tubulin (Sigma)     |
 | **Secondary Ab, concentration/dilution:** |  Alexa Fluor 647 anti-mouse            |
 | **Fiducial (type/present):**              |   not present                          |
-| **SR mode, Imager conc, buffer, etc:**    |    dSTORM, ?mM MEA in 90% glycerol     |
+| **SR mode, Imager conc, buffer, etc:**    |    dSTORM, 50mM MEA in 90% glycerol     |
 | **Number of frames:**                     |   35.4k frames, 25ms/frame             |
 
 **Note**: Some further data is available from the metadata in the `h5r` file. Please consult the metadata tab in `visGUI`.

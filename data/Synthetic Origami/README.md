@@ -1,22 +1,30 @@
-# 2D synthetic DNA origami (6 die face) DNA-PAINT data set #
-
-This is a region from a DNA-PAINT Origami data set. We include a recipe (YAML file) that corrects for drift using the fiducial present in the data. Events are coalesced and non-specific events (based on a temporal filter) are removed. Finally a filtered region of interest (select data source ROI) has been created to peruse.
 
 
-# Sample and acquisition information: #
+# Data Description
 
-1'Ab: N/A
+## 2D synthetic DNA origami (6 die face) DNA-PAINT data set
 
-2'Ab: N/A
+This is a region from a DNA-PAINT Origami data set which has 6 sites in the arrangement of the face of a die.
 
-Type: DNA-PAINT (D1 sequence)
+## Sample information
 
-Buffer: 600 mM NaCl in PBS (pH=8.0). 2 nM ATTO 655 (P1) imager sequence.
+| Details                                   | Sample                    |
+| ------------------------------------------|:-------------------------:|
+| **File name/date:**                       | `130919_sA(ROI+fiducials).hdf` |
+| **Sample (tissue/cell type):**            |  Synthetic origami                          |
+| **Sample prep., fixation method:**        |  DNA-PAINT (D1 sequence)      |
+| **Primary Ab, concentration/dilution:**   |  N/A    |
+| **Secondary Ab, concentration/dilution:** |  N/A            |
+| **Fiducial (type/present):**              |   200 nm Red fiducial used               |
+| **SR mode, Imager conc, buffer, etc:**    |    600 mM NaCl in PBS (pH=8.0). 2 nM ATTO 655 (P1) imager sequence     |
+| **Number of frames:**                     |   150.5k frames, 100ms/frame             |
 
-Camera: ZYLA-4.2-CL10 (Andor sCMOS)
+**Note**: Some further data is available from the metadata in the `h5r` file. Please consult the metadata tab in `visGUI`.
 
-Integration time:  100 ms
+### Notes
 
-Total duration (frames): 150.5k
- 
-Additional Information: Sample was washed approximately halfway through and replaced with the same imaging buffer for the second half of the experiment.
+Sample was washed approximately halfway through and replaced with the same imaging buffer for the second half of the experiment..
+   
+### Supplied recipe
+
+We supply a recipe `Recipe to correct and filter series 130919_sA.yaml` that can be loaded in visGUI and does some basic filtering plus drift correction. Events are coalesced and non-specific events (based on a temporal filter) are removed. Select the `ROI` data source to see the drift corrected data. 
