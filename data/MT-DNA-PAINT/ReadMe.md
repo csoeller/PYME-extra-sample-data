@@ -11,22 +11,22 @@ DNA-PAINT data of microtubules in COS-7 cells labeled with anti-alpha tubulin (?
 | **File name/date:**                       |   `19_11_series_C.h5r`    |
 | **Sample (tissue/cell type):**            |   COS-7                   |
 | **Sample prep., fixation method:**        |  GA protocol from ref [1] |
-| **Primary Ab, concentration/dilution:**   |                           |
+| **Primary Ab, concentration/dilution:**   |   alpha-tubulin (1:500)   |
 | **Secondary Ab, concentration/dilution:** | MP Massive-AB anti-mouse  |
-| **Fiducial (type/present):**              |                           |
-| **SR mode, Imager conc, buffer, etc:**    | DNA-PAINT                          |
-| **Number of frames:**                     |                           |
+| **Fiducial (type/present):**              |  none                     |
+| **SR mode, Imager conc, buffer, etc:**    | DNA-PAINT, 0.1 nM         |
+| **Number of frames:**                     |    15k                    |
 
 | Details                                   | Sample                    |
 | ------------------------------------------|:-------------------------:|
 | **File name/date:**                       |   `24_11_series_B.h5r`    |
 | **Sample (tissue/cell type):**            |  COS-7                    |
 | **Sample prep., fixation method:**        | GA protocol from ref [1]  |
-| **Primary Ab, concentration/dilution:**   |                           |
+| **Primary Ab, concentration/dilution:**   | alpha-tubulin (1:500)     |
 | **Secondary Ab, concentration/dilution:** | MP sdAb anti-mouse IgG kappa light chain   |
 | **Fiducial (type/present):**              |                           |
-| **SR mode, Imager conc, buffer, etc:**    | DNA-PAINT                  |
-| **Number of frames:**                     |                           |
+| **SR mode, Imager conc, buffer, etc:**    | DNA-PAINT, 0.1 nM         |
+| **Number of frames:**                     |     15k                   |
 
 **Note**: Some further data is available from the metadata in the `h5r` file. Please consult the metadata tab in `visGUI`.
 
