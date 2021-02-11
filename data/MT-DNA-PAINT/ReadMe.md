@@ -24,7 +24,7 @@ DNA-PAINT data of microtubules in COS-7 cells labeled with anti-alpha tubulin (?
 | **Sample prep., fixation method:**        | GA protocol from ref [1]  |
 | **Primary Ab, concentration/dilution:**   | alpha-tubulin (1:500)     |
 | **Secondary Ab, concentration/dilution:** | MP sdAb anti-mouse IgG kappa light chain   |
-| **Fiducial (type/present):**              |                           |
+| **Fiducial (type/present):**              |   none                    |
 | **SR mode, Imager conc, buffer, etc:**    | DNA-PAINT, 0.1 nM         |
 | **Number of frames:**                     |     15k                   |
 
