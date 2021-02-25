@@ -14,7 +14,7 @@
 | **Secondary Ab, concentration/dilution:** |  LB12 (donkey anti-mouse), 1:500           |
 |                                           |  Alexa Fluor 647 (goat anti-mouse), 1:500  |
 | **Fiducial (type/present):**              |	 none
-|**SR mode, Imager conc, buffer, etc:**     |	DNA-PAINT, 0.1 nM                          |
+|**SR mode, Imager conc, buffer, etc:**     |	DNA-PAINT, 0.1 nM (LP1-ATTO655)           |
 | **Number of frames:**                     |  ~10,000                                   |
  
 
@@ -28,7 +28,7 @@
 | **Secondary Ab, concentration/dilution:** |  LB12 (donkey anti-mouse), 1:500           |
 |                                           |  Alexa Fluor 647 (goat anti-mouse), 1:500  |
 | **Fiducial (type/present):**              |	 none
-|**SR mode, Imager conc, buffer, etc:**     |	DNA-PAINT, 0.1 nM                          |
+|**SR mode, Imager conc, buffer, etc:**     |	DNA-PAINT, 0.1 nM (LP1-ATTO655)           |
 | **Number of frames:**                     |  ~10,000                                   |
 
 
@@ -42,7 +42,7 @@
 | **Secondary Ab, concentration/dilution:** |  LB12 (donkey anti-mouse), 1:500           |
 |                                           |  Alexa Fluor 647 (goat anti-mouse), 1:500  |
 | **Fiducial (type/present):**              |	 none
-|**SR mode, Imager conc, buffer, etc:**     |	DNA-PAINT, 0.1 nM                          |
+|**SR mode, Imager conc, buffer, etc:**     |	DNA-PAINT, 0.1 nM (LP1-ATTO655)                          |
 | **Number of frames:**                     |  ~10,000                                   |
 
 
@@ -55,7 +55,7 @@
 | **Primary Ab, concentration/dilution:**   |  NONE                                      |
 | **Secondary Ab, concentration/dilution:** |  NONE                                      |
 | **Fiducial (type/present):**              |	 none
-|**SR mode, Imager conc, buffer, etc:**     |	DNA-PAINT, 0.1 nM                          |
+|**SR mode, Imager conc, buffer, etc:**     |	DNA-PAINT, 0.1 nM (LP1-ATTO655)                           |
 | **Number of frames:**                     |  ~10,000                                   |
 
 **Notes:** 
