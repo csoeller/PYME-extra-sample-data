@@ -2,7 +2,7 @@
 
 ## DNA-PAINT microtubules
 
-DNA-PAINT data of microtubules in COS-7 cells labeled with anti-alpha tubulin (?) and using Massive Photonics secondaries and sdABs.
+DNA-PAINT data of microtubules in COS-7 cells labeled with anti-alpha tubulin (m) and using Massive Photonics secondaries and sdABs.
 
 ### Sample information
 
@@ -30,10 +30,6 @@ DNA-PAINT data of microtubules in COS-7 cells labeled with anti-alpha tubulin (?
 
 **Note**: Some further data is available from the metadata in the `h5r` file. Please consult the metadata tab in `visGUI`.
 
-
-### Notes
-
-Add free form notes here, e.g. what this sample demonstrates, what is done in the notebook accompanying the data, etc.
 
 ### Supplied recipe [optional]
 
