@@ -37,6 +37,8 @@
     inputName: find_fid
     outputName: fiducialAdded
     timeWindow: 250
+    filterMethod: Median
+    filterScale: 13.0    
 - localisations.FiducialApplyFromFiducials:
     inputData: filtered_localizations
     inputFiducials: fiducialAdded
@@ -49,7 +51,7 @@
 - localisations.MergeClumps:
     inputName: with_clumps
     outputName: coalesced
-- localisations.DBSCANClustering2:
+- localisations.DBSCANClustering:
     columns:
     - x
     - y
