@@ -8,6 +8,17 @@ DNA-PAINT data of microtubules in COS-7 cells labeled with anti-alpha tubulin (m
 
 | Details                                   | Sample                    |
 | ------------------------------------------|:-------------------------:|
+| **File name/date:**                       |   `270121_series_F_biplane_3D_MT.hdf`    |
+| **Sample (tissue/cell type):**            |   COS-7                   |
+| **Sample prep., fixation method:**        |  GA protocol from ref [1] |
+| **Primary Ab, concentration/dilution:**   |   alpha-tubulin (1:500)   |
+| **Secondary Ab, concentration/dilution:** | MP Massive-AB anti-mouse  |
+| **Fiducial (type/present):**              | 200 nm Red fluorescent beads                     |
+| **SR mode, Imager conc, buffer, etc:**    | DNA-PAINT, 0.1 nM         |
+| **Number of frames:**                     |    50k                    |
+
+| Details                                   | Sample                    |
+| ------------------------------------------|:-------------------------:|
 | **File name/date:**                       |   `19_11_series_C.h5r`    |
 | **Sample (tissue/cell type):**            |   COS-7                   |
 | **Sample prep., fixation method:**        |  GA protocol from ref [1] |
