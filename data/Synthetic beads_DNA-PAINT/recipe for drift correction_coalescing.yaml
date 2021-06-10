@@ -1,0 +1,52 @@
+- localisations.AddPipelineDerivedVars:
+    inputEvents: ''
+    inputFitResults: FitResults
+    outputLocalizations: Localizations
+- localisations.ProcessColour:
+    input: Localizations
+    output: colour_mapped
+- tablefilters.FilterTable:
+    filters:
+      A:
+      - 5
+      - 20000
+      error_x:
+      - 0
+      - 30
+      error_y:
+      - 0
+      - 30
+      sig:
+      - 95
+      - 200
+    inputName: colour_mapped
+    outputName: filtered_localizations
+- tablefilters.FilterTable:
+    filters:
+      x:
+      - 9640.529041845331
+      - 10409.808983400511
+      y:
+      - 16636.42548908103
+      - 17592.19753767989
+    inputName: filtered_localizations
+    outputName: Fiducials
+- localisations.FiducialTrack:
+    inputName: Fiducials
+    outputName: fiducialAdded
+- localisations.FiducialApplyFromFiducials:
+    inputData: filtered_localizations
+    inputFiducials: fiducialAdded
+    outputFiducials: corrected_fiducials
+    outputName: fiducialApplied
+- tracking.FindClumps:
+    inputName: fiducialApplied
+    outputClumps: ''
+    outputName: with_clumps
+    timeWindow: 5
+- localisations.MergeClumps:
+    inputName: with_clumps
+    outputName: coalesced
+- localisations.TimeBlocks:
+    input: fiducialApplied
+    output: time_blocked
