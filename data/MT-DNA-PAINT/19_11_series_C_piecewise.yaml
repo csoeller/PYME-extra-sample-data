@@ -1,0 +1,47 @@
+- localisations.AddPipelineDerivedVars:
+    inputEvents: ''
+    inputFitResults: FitResults
+    outputLocalizations: Localizations
+- localisations.ProcessColour:
+    input: Localizations
+    output: colour_mapped
+- tablefilters.FilterTable:
+    filters:
+      A:
+      - 5
+      - 20000
+      error_x:
+      - 0
+      - 30
+      error_y:
+      - 0
+      - 30
+      sig:
+      - 95
+      - 200
+    inputName: colour_mapped
+    outputName: filtered_localizations
+- pymenf.DriftCorrectModel:
+    driftCorrParams:
+      a0: 0.014642355032265186
+      a1: 0.0028558664489537477
+      a2: 0.0012321555987000465
+      a3: 0.008676758036017418
+      a4: 0.01700495183467865
+      a5: 0.018511781468987465
+      a6: 0.002111142734065652
+      b0: -0.0038791480474174023
+      b1: -0.0065839835442602634
+      b2: -0.0006700627855025232
+      b3: -0.00421870918944478
+      b4: -0.014309822581708431
+      b5: 0.009326704777777195
+      b6: 0.0009367811144329607
+      c: 0.0
+    driftExprX: x_raw + piecewiseLinear(t, [3.0e+03, 5.9e+03, 8.9e+03, 1.2e+04, 1.5e+04,
+      1.7e+04], [a0, a1, a2, a3, a4, a5, a6])
+    driftExprY: y_raw + piecewiseLinear(t, [3.0e+03, 5.9e+03, 8.9e+03, 1.2e+04, 1.5e+04,
+      1.7e+04], [b0, b1, b2, b3, b4, b5, b6])
+    inputName: filtered_localizations
+    outputName: drift_corrected
+    presets: Piecewise Linear
